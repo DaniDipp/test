@@ -7,10 +7,10 @@ jobs:
       uses: wei/curl@v1
       with:
         args: >-
-          --location '${{  variables.MULTICRAFT_API }}'
+          --location '${{  secrets.MULTICRAFT_API }}'
           --header 'Content-Type: application/x-www-form-urlencoded'
           --data-urlencode '_MulticraftAPIMethod=runScript'
-          --data-urlencode '_MulticraftAPIUser=${{  variables.MULTICRAFT_USER }}'
+          --data-urlencode '_MulticraftAPIUser=${{  secrets.MULTICRAFT_USER }}'
           --data-urlencode 'daemon_id=1'
           --data-urlencode 'script=updateDvzResourcepack'
           --data-urlencode 'args='
